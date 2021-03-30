@@ -1,5 +1,29 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  //- h1= title
+  //- p Welcome to #{title}
+  nav#navbar-default  
+  div.container-fluid
+    h1.navbar-header Mon super site !
+  .nav
+    ul 
+      each val in['Super film','Home', 'À propos', 'Contact']
+        li= val 
+  div
+    nav
+    navbar-default  
+      h1 Super film!
+    ul
+      li
+        a(href='#') Home
+      li
+        a(href='about.pug') À propos
+      li
+        a(href='contact.pug') Contact
+    //- input
+    div.card
+      h1 title
+      p Description
+      p Catégorie
+        
