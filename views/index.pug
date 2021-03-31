@@ -7,16 +7,16 @@ block content
   //- https://pugjs.org/language/includes.html
   include includes/var.pug
   //- p.testInclude Hey voici du texte qui  d'ailleurs : #{tayste}
-  nav#navbar-default  
-  div.container-fluid
-    h1.navbar-header Watch movie !
+  //- nav#navbar-default  
+  //- div.container-fluid
+  //-   h1.navbar-header Watch movie !
 
   mixin monFilm(film)
     .article  
       .header
         .nav
           ul 
-            each val in [{texte: "🎞 Super film", link:"#"}, {texte: "🏠 Acceuil", link:"#"}, {texte: "À propos", link: "#"}, {texte: "📔 Contact", link:"#"}]
+            each val in [{texte: "🎞 Super film", link:"#"}, {texte: "🏠 Acceuil", link:"#"}, {texte: "À propos", link: "/aPropos"}, {texte: "📔 Contact", link:"/aContact"}]
               a(href=val.link) #{val.texte}
     
       .header
@@ -26,11 +26,7 @@ block content
       .main
           img(src="images/ca.jpg")
           .description
-            h2 Description
-            p Octobre 1957. Ça se réveille et la petite ville de Derry dans le Maine ne sera plus jamais la même.
-            p Sept enfants font face à une horreur inimaginable qui apparait sous plusieurs formes, et notamment “Grippe-sou”,
-            p  un clown qui vit, chasse et tue dans les égouts de la ville. Des années plus tard,
-            p  ces adultes qui ont survécu, sont assez courageux pour retourner à Derry et arrêter cette tuerie, et cette fois pour de bon.
+            h2= film.description
           .footer
       .footer
         .Realisator Stephen King

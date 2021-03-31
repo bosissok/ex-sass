@@ -4,4 +4,15 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    nav#navbar-default  
+    div.container-fluid
+      h1.navbar-header Watch movie !
+
+    mixin monFilm(film)
+      .article  
+        .header
+          .nav
+            ul 
+              each val in [{texte: "🎞 Super film", link:"#"}, {texte: "🏠 Acceuil", link:"#"}, {texte: "À propos", link: "/aPropos"}, {texte: "📔 Contact", link:"/aContact"}]
+                a(href=val.link) #{val.texte}
     block content

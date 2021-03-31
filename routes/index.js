@@ -9,12 +9,13 @@ router.get('/', function(req, res, next) {
       console.error(err)
       return
     }
+    // Récupération de mon objet data, puis parser avec la methode JSON.parse()
     let movies = JSON.parse(data)
-      console.log(movies)
+      console.log(movies.title)
       // console.log(data)
       res.render('index', { title: 'Express', mesFilms: movies});
   })
- 
+  // MES Variables ont été importé dans Data ==> MOVIE.JSON
   // let film1 = {
   //   actors: ['Tim Curry', 'Emily Perkins', 'Seth Green'], 
   //   category: "Drama", 
