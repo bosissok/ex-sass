@@ -21,8 +21,8 @@ block content
     
       .header
         div.entete
-          h1 film.titre.texte
-          h2 Catégorie
+          h1= film.title.text
+          h2= film.category
       .main
           img(src="images/ca.jpg")
           .description
@@ -35,10 +35,11 @@ block content
       .footer
         .Realisator Stephen King
         ul.actors 
-          each val in ['Tim Curry', 'Emily Perkins', 'Seth Green']
+          each val in film.actors
             li=val
+              
         .date Sortie le : 30-03-2021
-  each val in ["ça", "spiderman", "Avengers"]
-    +monFilm(ça)
+  each val in mesFilms 
+    +monFilm(val)
    
         
